@@ -1,0 +1,10 @@
+// mixin to generate the @font-face rule
+@mixin font-face($name, $filename, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: #{$name};
+    src: url('#{$filename}.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+

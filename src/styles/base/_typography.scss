@@ -1,0 +1,27 @@
+// Use the mixin to generate the @font-face rule for Pangea Afrikan Fonts
+@include font-face('Pangea Afrikan', '../../assets/fonts/pangea_afrikan/PangeaAfrikan-Regular', $font-weight-4, normal);
+@include font-face('Pangea Afrikan Bold', '../../assets/fonts/pangea_afrikan/PangeaAfrikan-Bold', $font-weight-7, normal);
+@include font-face('Pangea Text', '../../assets/fonts/pangea_text/PangeaAfrikanText-Regular', $font-weight-4, normal);
+@include font-face('Pangea Text Bold', '../../assets/fonts/pangea_text/PangeaAfrikanText-Bold', $font-weight-7, normal);
+
+body {
+  font-family: 'Pangea Text', 'Helvetica', 'Arial', sans-serif;
+  font-size: $font-size;
+  line-height: 1.5;
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Pangea Afrikan', 'Helvetica', 'Arial', sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+a, .nav-link {
+  text-decoration: none;
+}
+
+a:hover, .nav-link:hover, .nav-link:active, a:active {
+  text-decoration: none;
+  color: $primary-color;
+}

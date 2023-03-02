@@ -1,0 +1,115 @@
+.navbar {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 to_rem(50px);
+  background-color: $white;
+  box-shadow: 0 0 to_rem(10px) rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: to_rem(80px);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 9999;
+  transform: translate(-50%);
+
+  .nav-items {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: to-rem(20px);
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    .nav-links {
+      white-space: nowrap;
+    }
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-wrapper {
+    justify-self: start;
+    grid-column: 1;
+  }
+
+  .site-logo {
+    grid-column: 2;
+  }
+
+  .actions {
+    justify-self: end;
+    grid-column: 3;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .navbar {
+    z-index: 99;
+    grid-template-columns: repeat(3, auto);
+
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: $white;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      opacity: 0;
+      align-items: stretch;
+      padding: to-rem(80px) 0 to-rem(30px) 0;
+      margin: 0;
+      transition: 0.3s ease-in-out;
+
+
+      &.active {
+        left: 0;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+        z-index: -1;
+      }
+
+      .nav-links {
+        display: block;
+        width: 100%;
+        padding: to-rem(32px);
+      }
+
+    }
+
+    .menu-icon {
+      cursor: pointer;
+      display: flex;
+      grid-column: 1;
+      align-self: center;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.navbar-brand {
+  margin: 0;
+  padding: 0;
+
+  .brand-logo {
+    height: to_rem(55px);
+    padding: 0 to_rem(55px);
+    cursor: pointer;
+
+    @media screen and (max-width: 925px) {
+      height: to_rem(50px);
+      padding: 0 to_rem(15px);
+    }
+  }
+}
+
+.icon {
+  color: $primary-color;
+  font-size: 20px;
+}

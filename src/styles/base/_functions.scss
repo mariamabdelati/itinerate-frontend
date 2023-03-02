@@ -1,0 +1,7 @@
+/* pixel to rem conversion */
+
+@function to-rem($value) {
+  @if type-of($value)=="number" {
+    @return calc($value / $font-size) * 1rem;
+  }
+}
