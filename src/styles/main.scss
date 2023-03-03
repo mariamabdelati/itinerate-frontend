@@ -18,6 +18,7 @@
 @import '../styles/base/functions.scss';
 
 /* 4. Layout-related sections */
+@import '../styles/layout/_copyrights.scss';
 @import '../styles/layout/_footer.scss';
 @import '../styles/layout/_header.scss';
 @import '../styles/layout/_hero.scss';
@@ -28,11 +29,13 @@
 @import '../styles/components/_alert.scss';
 @import '../styles/components/_button.scss';
 @import "../styles/components/_card.scss";
+@import "../styles/components/_listing-card.scss";
 @import "../styles/components/_search.scss";
-@import "../styles/components/_slider.scss";
+@import "../styles/components/_recommendations";
 @import '../styles/components/_titles.scss';
 
 /* 6. Page-specific style */
+@import '../styles/pages/_error.scss';
 @import '../styles/pages/_login.scss';
 @import '../styles/pages/_search.scss';
 

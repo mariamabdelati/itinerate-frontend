@@ -1,4 +1,4 @@
-import Directory from "../../utilities/Directory";
+import Directory from "../utilities/Directory"
 
 export const NavbarItems = [
     {
@@ -15,5 +15,5 @@ export const NavbarItems = [
         title: 'Top Destinations',
         url: Directory.TOP_DESTINATIONS,
         cName: 'nav-links',
-    }
+    },
 ]

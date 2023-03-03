@@ -1,0 +1,14 @@
+a, .nav-link {
+  color: $black;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+a:hover, .nav-link:hover, .nav-link:active, a:active, a:focus, .nav-link:focus, .nav-link.visited, a.visited {
+  text-decoration: none;
+  color: $primary-color;
+}
