@@ -1,0 +1,161 @@
+.listing-card {
+  background: $white;
+  overflow: hidden;
+  border-radius: to-rem(15px);
+
+  .listing-card-banner {
+    height: to-rem(250px);
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .listing-body {
+    padding: to-rem(30px) to-rem(20px);
+
+    .listing-card-title {
+      margin-bottom: to-rem(15px);
+    }
+
+    .listing-card-text {
+      line-height: 1.6;
+      margin-bottom: to-rem(20px);
+      font-size: to-rem(14px);
+      color: $text-color;
+    }
+  }
+}
+
+.listing-card-details {
+  background: $white;
+  max-width: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: to-rem(8px);
+  box-shadow: 0 0 to-rem(5px) rgba(0, 0, 0, 0.1);
+  border-radius: to-rem(50px);
+
+  .details-item {
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: to-rem(4px);
+      right: to-rem(-1px);
+      bottom: to-rem(4px);
+      width: to-rem(1px);
+      background: $gray-200;
+    }
+
+    .details-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: to-rem(5px);
+      padding-inline: to-rem(9px);
+      color: $black;
+      font-size: to-rem(11px);
+
+      .list-icon {
+        color: $primary-color;
+        font-size: to-rem(13px);
+      }
+    }
+  }
+}
+
+.listing-price {
+  background: $primary-color;
+  color: $white;
+  padding: to-rem(25px) to-rem(20px);
+  text-align: center;
+
+  .listing-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: to-rem(5px) to-rem(15px);
+    margin-bottom: to-rem(10px);
+
+    .listing-reviews {
+      font-size: to-rem(14px);
+    }
+
+    .listing-rating {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: to-rem(1px);
+      font-size: to-rem(14px);
+
+      .list-icon {
+        color: $white;
+        font-size: to-rem(13px);
+      }
+
+      .rating-icon:last-child {
+        color: $gray-300;
+      }
+    }
+  }
+
+  .price-text {
+    font-size: calc(1.2rem + 1vw);
+
+    font-weight: 800;
+
+    span {
+      font-size: to-rem(12px);
+      font-weight: initial;
+
+    }
+  }
+
+  button {
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .listing-card {
+    display: grid;
+    grid-template-columns: 1.3fr 1.5fr 1fr;
+
+    .listing-card-banner {
+      height: 100%;
+    }
+
+    .listing-body {
+      place-self: center;
+      padding: to-rem(40px);
+    }
+
+    .listing-price {
+      display: grid;
+      place-content: center;
+
+      .listing-wrapper {
+        margin-bottom: to-rem(15px);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .listing-card {
+    .details-box {
+      font-size: to-rem(13px);
+    }
+
+    .list-icon {
+      font-size: to-rem(15px);
+    }
+  }
+}
