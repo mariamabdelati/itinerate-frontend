@@ -1,0 +1,16 @@
+.copyrights {
+  background: $black;
+  padding: to-rem(32px) 0;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    color: $white;
+    font-size: to-rem(14px);
+    line-height: 1.4;
+  }
+}

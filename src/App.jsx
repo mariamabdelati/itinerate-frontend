@@ -22,6 +22,8 @@ function App() {
                     <Route path={Directory.TOP_DESTINATIONS} element={<TopDestinations/>}/>
                 </Route>
             </Routes>
+            <Footer/>
+            <Copyrights/>
         </>
     )
 }
