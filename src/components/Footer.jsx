@@ -15,6 +15,21 @@ const Footer = () => {
 
                     <div className="footer-links">
                         <ul className="footer-list">
+                            <span className="footer-title">Navigation</span>
+                            <li className="footer-item">
+                                <a href="src/components#" className="footer-link">Home</a>
+                            </li>
+                            <li className="footer-item">
+                                <a href="src/components#" className="footer-link">Top Destinations</a>
+                            </li>
+                            <li className="footer-item">
+                                <a href="src/components#" className="footer-link">Top Countries</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="footer-links">
+                        <ul className="footer-list">
                             <span className="footer-title">Helpful Links</span>
                             <li className="footer-item">
                                 <a href="src/components#" className="footer-link">About Us</a>

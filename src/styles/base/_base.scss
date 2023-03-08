@@ -12,3 +12,48 @@ a:hover, .nav-link:hover, .nav-link:active, a:active, a:focus, .nav-link:focus, 
   text-decoration: none;
   color: $primary-color;
 }
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.wrapper {
+  padding: 0 1.5rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    width: 80% !important;
+    margin: auto !important;
+  }
+
+  .section {
+    padding: 5rem 0 3rem;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.7;
+  }
+}
+
+::selection {
+  background-color: $primary-color;
+  color: $white;
+}

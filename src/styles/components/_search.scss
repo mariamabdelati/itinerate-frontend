@@ -64,28 +64,3 @@
 //.DateRangePickerInput {
 //  padding: 0;
 //}
-
-@media screen and (min-width: 480px) {
-  .search-bar {
-    bottom: -100px;
-    width: 90%;
-    grid-template-columns: repeat(2, 1fr);
-
-    .btn {
-      transform: translateY(to-rem(15px));
-    }
-  }
-}
-
-@media screen and (min-width: 926px) {
-  .search-bar {
-    bottom: -10px;
-    grid-template-columns: repeat(4, 1fr);
-
-    //grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-    //.dateDiv {
-    //  grid-column: span 2;
-    //}
-  }
-}

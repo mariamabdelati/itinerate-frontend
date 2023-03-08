@@ -1,11 +1,11 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 // import "react-date-range/dist/styles.css"; // main style file
 // import "react-date-range/dist/theme/default.css";
 import "react-modern-calendar-datepicker/lib/DatePicker.css"
 // import "react-dates/initialize"
 // import "react-dates/lib/css/_datepicker.css"
 // import { DateRange } from "react-date-range";
-import DatePicker, {utils} from "@amir04lm26/react-modern-calendar-date-picker"
+import DatePicker, { utils } from "@amir04lm26/react-modern-calendar-date-picker"
 
 const SearchBar = () => {
     const [selectedDayRange, setSelectedDayRange] = useState({
@@ -24,7 +24,7 @@ const SearchBar = () => {
     } else {
         formatInputValue = `${selectedDayRange.from.day}/${selectedDayRange.from.month}/${selectedDayRange.from.year} - ${selectedDayRange.to.day}/${selectedDayRange.to.month}/${selectedDayRange.to.year}`
     }
-    const renderCustomInput = ({ref}) => (
+    const renderCustomInput = ( { ref } ) => (
         <input
             readOnly
             ref={ref} // necessary
@@ -47,7 +47,7 @@ const SearchBar = () => {
                 <DatePicker
                     value={selectedDayRange}
                     onChange={setSelectedDayRange}
-                    calendarPopperPosition={"bottom"}
+                    calendarPopperPosition={"top"}
                     renderInput={renderCustomInput}
                     focusInputOnDateSelect={false}
                     colorPrimary="#0057d9"

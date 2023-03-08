@@ -4,7 +4,6 @@
   padding: to-rem(32px) 0;
 
   .wrapper {
-
     gap: to-rem(24px) !important;
     text-align: center;
 
@@ -56,4 +55,34 @@
 .divider {
   background-color: $primary-color;
   height: to-rem(32px);
+}
+
+@media screen and (min-width: 448px) {
+  .footer {
+    .wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: flex-start !important;
+
+      .footer-links {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .footer {
+    .wrapper {
+      grid-template-columns: repeat(4, 1fr);
+      align-items: flex-start !important;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .footer {
+    .wrapper {
+      padding: to-rem(32px);
+    }
+  }
 }
