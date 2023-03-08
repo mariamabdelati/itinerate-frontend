@@ -1,0 +1,34 @@
+// Use the mixin to generate the @font-face rule for Pangea Afrikan Fonts
+@include font-face('Pangea Afrikan', '../../assets/fonts/pangea_afrikan/PangeaAfrikan-Light', $font-weight-3, normal);
+@include font-face('Pangea Afrikan', '../../assets/fonts/pangea_afrikan/PangeaAfrikan-LightItalic', $font-weight-3, italic);
+@include font-face('Pangea Afrikan', '../../assets/fonts/pangea_afrikan/PangeaAfrikan-Regular', $font-weight-4, normal);
+@include font-face('Pangea Afrikan', '../../assets/fonts/pangea_afrikan/PangeaAfrikan-Italic', $font-weight-4, italic);
+@include font-face('Pangea Afrikan', '../../assets/fonts/pangea_afrikan/PangeaAfrikan-Medium', $font-weight-5, normal);
+@include font-face('Pangea Afrikan', '../../assets/fonts/pangea_afrikan/PangeaAfrikan-MediumItalic', $font-weight-5, italic);
+@include font-face('Pangea Afrikan', '../../assets/fonts/pangea_afrikan/PangeaAfrikan-SemiBold', $font-weight-6, normal);
+@include font-face('Pangea Afrikan', '../../assets/fonts/pangea_afrikan/PangeaAfrikan-SemiBoldItalic', $font-weight-6, italic);
+@include font-face('Pangea Afrikan', '../../assets/fonts/pangea_afrikan/PangeaAfrikan-Bold', $font-weight-7, normal);
+@include font-face('Pangea Afrikan', '../../assets/fonts/pangea_afrikan/PangeaAfrikan-BoldItalic', $font-weight-7, italic);
+@include font-face('Pangea Text', '../../assets/fonts/pangea_text/PangeaAfrikanText-Light', $font-weight-3, normal);
+@include font-face('Pangea Text', '../../assets/fonts/pangea_text/PangeaAfrikanText-LightItalic', $font-weight-3, italic);
+@include font-face('Pangea Text', '../../assets/fonts/pangea_text/PangeaAfrikanText-Regular', $font-weight-4, normal);
+@include font-face('Pangea Text', '../../assets/fonts/pangea_text/PangeaAfrikanText-Italic', $font-weight-4, italic);
+@include font-face('Pangea Text', '../../assets/fonts/pangea_text/PangeaAfrikanText-Medium', $font-weight-5, normal);
+@include font-face('Pangea Text', '../../assets/fonts/pangea_text/PangeaAfrikanText-MediumItalic', $font-weight-5, italic);
+@include font-face('Pangea Text', '../../assets/fonts/pangea_text/PangeaAfrikanText-SemiBold', $font-weight-6, normal);
+@include font-face('Pangea Text', '../../assets/fonts/pangea_text/PangeaAfrikanText-SemiBoldItalic', $font-weight-6, italic);
+@include font-face('Pangea Text', '../../assets/fonts/pangea_text/PangeaAfrikanText-Bold', $font-weight-7, normal);
+@include font-face('Pangea Text', '../../assets/fonts/pangea_text/PangeaAfrikanText-BoldItalic', $font-weight-7, italic);
+
+body {
+  font-family: 'Pangea Text', 'Helvetica', 'Arial', sans-serif;
+  font-size: $font-size;
+  line-height: 1.5;
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Pangea Afrikan', 'Helvetica', 'Arial', sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
