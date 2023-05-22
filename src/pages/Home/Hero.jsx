@@ -8,11 +8,11 @@ const Hero = () => {
                     <h1 className="hero-title">Explore Your Way</h1>
 
                     <p className="hero-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                                                    natus, enim ipsam magnam odit deserunt itaque? Minima earum velit
-                                                    tenetur!</p>
+                        natus, enim ipsam magnam odit deserunt itaque? Minima earum velit
+                        tenetur!</p>
                 </div>
 
-                <SearchBar/>
+                <SearchBar position="top"/>
 
             </div>
         </section>
