@@ -1,20 +1,24 @@
-import React, {useRef, useState} from "react"
+import React, {useContext, useRef, useState} from "react"
 import "react-modern-calendar-datepicker/lib/DatePicker.css"
 import DatePicker, {utils} from "@amir04lm26/react-modern-calendar-date-picker"
 import {useNavigate} from "react-router-dom"
 import Directory from "../utilities/Directory"
 import {BASE_URL} from "../utilities/config";
+import {SearchContext} from "../context/searchContext";
 
 
 const SearchBar = ({position}) => {
     const navigate = useNavigate()
     const locationRef = useRef('')
     const budgetRef = useRef(0)
+    const {dispatch} = useContext(SearchContext);
 
     const searchHandler = async () => {
         const location = locationRef.current.value
         const date = selectedDayRange
         const budget = budgetRef.current.value
+
+        dispatch({type: "NEW_SEARCH", payload: {location, date, budget}});
 
         if ((location.trim().length === 0 && budget.trim().length === 0) || selectedDayRange.from == null) {
             return alert('Please enter a valid search criteria: you can search by trip or budget or both but must include trip dates');
@@ -58,7 +62,7 @@ const SearchBar = ({position}) => {
     } else {
         formatInputValue = `${selectedDayRange.from.day}/${selectedDayRange.from.month}/${selectedDayRange.from.year} - ${selectedDayRange.to.day}/${selectedDayRange.to.month}/${selectedDayRange.to.year}`
     }
-    
+
     const renderCustomInput = ({ref}) => (
         <input
             readOnly
