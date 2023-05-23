@@ -1,0 +1,134 @@
+.recommendations {
+  padding-top: to-rem(240px);
+
+  .recommendations-content {
+    .recommendations-header {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: to-rem(16px);
+
+      .recommendations-text {
+        .recommendations-title {
+          color: $black;
+          line-height: to-rem(24px);
+        }
+
+        p {
+          padding-bottom: to-rem(8px);
+          font-size: to-rem(13px);
+          color: $text-color;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+
+      .recommendations-controls {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .arrows {
+          display: flex;
+          align-items: center;
+          gap: to-rem(8px);
+
+          .controls {
+            padding: to-rem(10px);
+            background: $gray-200;
+            border-radius: 50%;
+            font-size: to-rem(16px);
+
+            &:hover {
+              background: $black;
+              color: $white;
+            }
+
+            .leftArrow {
+              background: $black;
+              color: $white;
+
+              &:hover {
+                background: $text-color;
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .recommendations-slider {
+      overflow: hidden;
+      padding: to-rem(32px) 0;
+      gap: to-rem(16px);
+
+    }
+  }
+}
+
+.slick {
+  overflow-y: hidden;
+}
+
+.slick-slide {
+  padding-left: to-rem(8px);
+  padding-right: to-rem(8px);
+}
+
+.slick-list {
+  padding-top: to-rem(10px) !important;
+  padding-bottom: to-rem(10px) !important;
+}
+
+//.slick-track {
+//  display: flex !important;
+//  place-items: center;
+//  gap: 1rem;
+//}
+
+@media screen and (min-width: 480px) {
+  .recommendations {
+    padding-top: to-rem(160px);
+  }
+}
+
+@media screen and (min-width: 556px) {
+  .recommendations {
+    padding-top: to-rem(160px);
+
+    .recommendations-content {
+      .recommendations-header {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 926px) {
+  .recommendations {
+    padding-top: to-rem(112px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .recommendations {
+    padding-top: to-rem(112px);
+
+    .recommendations-content {
+      .recommendations-header {
+        .recommendations-text {
+          .recommendations-title {
+            font-size: to-rem(35px);
+          }
+
+          p {
+            font-size: to-rem(15px);
+          }
+        }
+      }
+    }
+  }
+}

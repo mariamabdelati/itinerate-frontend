@@ -1,0 +1,124 @@
+.hero {
+  height: 70vh;
+  background: linear-gradient(rgba(33, 33, 33, 0.522), rgba(33, 33, 33, 0.522)), url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+  position: relative;
+
+  .hero-content {
+    .hero-text {
+      text-align: center;
+
+      .hero-title {
+        font-size: to-rem(32px);
+        color: $white;
+        font-weight: 600;
+        line-height: to-rem(40px);
+      }
+
+      .hero-description {
+        font-size: to-rem(13px);
+        opacity: 0.9;
+        color: $white;
+        font-weight: 300;
+        padding: to-rem(16px) 0;
+        max-width: 70%;
+        text-align: center;
+        margin: auto;
+      }
+    }
+
+    .search-bar {
+      width: 80%;
+      position: absolute;
+      bottom: -35%;
+      transform: translate(-50%);
+      left: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .hero {
+    .hero-content {
+      .search-bar {
+        bottom: -100px;
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+
+        .btn {
+          transform: translateY(to-rem(15px));
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 556px) {
+  .hero {
+    .hero-content {
+      .hero-text {
+        .hero-title {
+          font-size: to-rem(40px);
+        }
+
+        .hero-description {
+          font-size: to-rem(15px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .hero {
+    .hero-content {
+      .hero-text {
+        padding: to-rem(16px) to-rem(160px);
+
+        .hero-title {
+          font-size: to-rem(56px);
+          margin: auto;
+          line-height: to-rem(64px);
+        }
+
+        .hero-description {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 926px) {
+  .hero {
+    .hero-content {
+      .search-bar {
+        bottom: -10%;
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    .hero-content {
+      .hero-text {
+        .hero-description {
+          font-size: to-rem(20px);
+        }
+      }
+
+      .search-bar {
+        width: 80%;
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export const BASE_URL = "https://itinerate-backend-production.up.railway.app/api/v1";

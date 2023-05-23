@@ -1,0 +1,46 @@
+.error-section {
+  margin-top: 65px;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  left: 0;
+  top: 0;
+
+  background-image: url("../../assets/images/errorBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .error-section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .image-layer {
+      padding: 25vh 20vh;
+      background-image: url("../../assets/images/errorImage.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    h2 {
+      //margin-bottom: 30px;
+      color: $white;
+      padding: 1.5vmin 0;
+      font-size: to-rem(50px);
+    }
+
+    p {
+      color: rgba(255, 255, 255, 76);
+      //margin-bottom: 30px;
+    }
+
+    button {
+      margin-top: 2rem;
+      cursor: pointer;
+    }
+  }
+}

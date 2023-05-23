@@ -2,6 +2,7 @@
   background: $white;
   overflow: hidden;
   border-radius: to-rem(15px);
+  box-shadow: 0 to-rem(2px) to-rem(8px) to-rem(2px) rgba(178, 178, 178, 0.4);
 
   .listing-card-banner {
     height: to-rem(250px);
