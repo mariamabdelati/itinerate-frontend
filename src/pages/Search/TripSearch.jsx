@@ -6,7 +6,6 @@ import SearchBar from "../../components/SearchBar"
 
 const TripSearch = () => {
     const location = useLocation()
-
     const data = location.state;
 
 

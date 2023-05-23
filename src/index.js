@@ -4,7 +4,7 @@ import {BrowserRouter as Router} from "react-router-dom"
 //import "./index.css"
 import "./styles/main.scss"
 import App from "./App"
-import {SearchContextProvider} from "./context/searchContext";
+import {SearchContextProvider} from "./context/SearchContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(

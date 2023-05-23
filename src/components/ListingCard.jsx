@@ -1,5 +1,5 @@
 import React from "react"
-import {faCalendarDay, faLocationDot, faStar, faUserGroup} from "@fortawesome/free-solid-svg-icons"
+import {faCalendarDay, faLocationDot, faMoneyBillWave, faStar} from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {Link} from "react-router-dom";
 
@@ -19,7 +19,7 @@ const ListingCard = ({location}) => {
                 <ul className="listing-card-details">
                     <li className="details-item">
                         <div className="details-box">
-                            <FontAwesomeIcon className="list-icon" icon={faUserGroup}/>
+                            <FontAwesomeIcon className="list-icon" icon={faMoneyBillWave}/>
                             <p className="text">{location.currencyCode}</p>
                         </div>
                     </li>

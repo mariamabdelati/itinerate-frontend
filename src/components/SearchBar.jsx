@@ -4,35 +4,54 @@ import DatePicker, {utils} from "@amir04lm26/react-modern-calendar-date-picker"
 import {useNavigate} from "react-router-dom"
 import Directory from "../utilities/Directory"
 import {BASE_URL} from "../utilities/config";
-import {SearchContext} from "../context/searchContext";
+import {SearchContext} from "../context/SearchContext";
 
 
 const SearchBar = ({position}) => {
     const navigate = useNavigate()
     const locationRef = useRef('')
-    const budgetRef = useRef(0)
+    const budgetRef = useRef()
     const {dispatch} = useContext(SearchContext);
+
 
     const searchHandler = async () => {
         const location = locationRef.current.value
         const date = selectedDayRange
         const budget = budgetRef.current.value
 
-        dispatch({type: "NEW_SEARCH", payload: {location, date, budget}});
-
         if ((location.trim().length === 0 && budget.trim().length === 0) || selectedDayRange.from == null) {
             return alert('Please enter a valid search criteria: you can search by trip or budget or both but must include trip dates');
         }
 
-        const startDate = new Date(
+        const startDate =
             `${date.from.year}-${date.from.month}-${date.from.day}`
-        ).setHours(0, 0, 0, 0);
-        const endDate = new Date(
-            `${date.to.year}-${date.to.month}-${date.to.day}`
-        ).setHours(0, 0, 0, 0);
+        let endDate = startDate;
+        if (date.to != null) {
+            endDate = `${date.to.year}-${date.to.month}-${date.to.day}`
+        }
+
+        const stDate = new Date(startDate).setHours(0, 0, 0, 0);
+        const eDate = new Date(endDate).setHours(0, 0, 0, 0);
+        dispatch({
+            type: "NEW_SEARCH",
+            payload: {
+                location,
+                date: [startDate, endDate],
+                budget,
+            },
+        });
+
+        const millisecondsPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds in a day
+        let dateDifferenceInDays = 1;
+        if (eDate !== stDate) {
+            dateDifferenceInDays = Math.round((eDate - stDate) / millisecondsPerDay);
+        }
+
+
+        const dailyCost = budget / dateDifferenceInDays;
 
         const res = await fetch(
-            `${BASE_URL}/trips/search?destinationName=${location}&startDate=${startDate}&endDate=${endDate}&dailyCost=${budget}`
+            `${BASE_URL}/trips/search?destinationName=${location}&startDate=${startDate}&endDate=${endDate}&dailyCost=${dailyCost}`
         );
 
         if (!res.ok) {
@@ -41,7 +60,7 @@ const SearchBar = ({position}) => {
 
         const result = await res.json()
 
-        navigate(`/${Directory.SEARCH_TRIP}?destinationName=${location}&startDate=${startDate}&endDate=${endDate}&dailyCost=${budget}`, {
+        navigate(`/${Directory.SEARCH_TRIP}?destinationName=${location}&startDate=${startDate}&endDate=${endDate}&dailyCost=${dailyCost}`, {
             state: result.data
         });
     }
